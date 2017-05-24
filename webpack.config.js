@@ -1,9 +1,11 @@
 const webpack = require('webpack');
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: path.resolve(__dirname, './src'),
+
   entry: {
     app: './scripts/app.js',
   },
@@ -15,6 +17,7 @@ module.exports = {
       contentBase: path.resolve(__dirname, './src'),
   },
   plugins: [
+      new ExtractTextPlugin('bundle.css'),
       new CopyWebpackPlugin([
           { from: 'index.html', to: 'dist/index.html' },
       ], {
@@ -34,5 +37,15 @@ module.exports = {
           // to `true` copies all files.
           copyUnmodified: true
       })
-  ]
+  ],
+  module: {
+    loaders: [
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract({
+          loader: 'css-loader?importLoaders=1!postcss-loader'
+        }),
+      },
+    ],
+  },
 };
