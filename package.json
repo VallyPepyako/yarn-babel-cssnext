@@ -7,9 +7,9 @@
   "author": "VallyPepyako",
   "license": "MIT",
   "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.2",
     "extract-text-webpack-plugin": "beta",
-    "file-loader": "^0.11.1",
     "postcss": "^6.0.1",
     "postcss-cssnext": "^2.11.0",
     "postcss-import": "^10.0.0",
