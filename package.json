@@ -1,0 +1,9 @@
+{
+  "name": "yarn-postcss-babel",
+  "version": "1.0.0",
+  "description": "boilerplate",
+  "main": "index.html",
+  "repository": "https://github.com/KikahaPlus44/YarnBableCssnext",
+  "author": "VallyPepyako",
+  "license": "MIT"
+}
