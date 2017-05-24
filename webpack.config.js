@@ -14,12 +14,12 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
-      contentBase: path.resolve(__dirname, './src'),
+      contentBase: path.resolve(__dirname, './dist'),
   },
   plugins: [
       new ExtractTextPlugin('bundle.css'),
       new CopyWebpackPlugin([
-          { from: 'index.html', to: 'dist/index.html' },
+          { from: 'index.html', to: 'index.html' },
       ], {
           ignore: [
               // // Doesn't copy any files with a txt extension
