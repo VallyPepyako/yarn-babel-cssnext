@@ -7,14 +7,15 @@
   "author": "VallyPepyako",
   "license": "MIT",
   "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "webpack": "^2.6.0",
     "webpack-dev-server": "2"
   },
   "scripts": {
-   "start": "webpack-dev-server --open",
-   "build": "webpack --config webpack.config.js",
-   "flow": "flow; test $? -eq 0 -o $? -eq 2",
-   "test": "flow && jest",
-   "test:watch": "jest --watch"
- }
+    "start": "webpack-dev-server --open",
+    "build": "webpack --config webpack.config.js",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2",
+    "test": "flow && jest",
+    "test:watch": "jest --watch"
+  }
 }
