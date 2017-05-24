@@ -7,14 +7,21 @@
   "author": "VallyPepyako",
   "license": "MIT",
   "devDependencies": {
+    "css-loader": "^0.28.2",
+    "extract-text-webpack-plugin": "beta",
+    "file-loader": "^0.11.1",
+    "postcss": "^6.0.1",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.5",
     "webpack": "^2.6.0",
     "webpack-dev-server": "2"
   },
   "scripts": {
-   "start": "webpack-dev-server --open",
-   "build": "webpack --config webpack.config.js",
-   "flow": "flow; test $? -eq 0 -o $? -eq 2",
-   "test": "flow && jest",
-   "test:watch": "jest --watch"
- }
+    "start": "webpack-dev-server --open",
+    "build": "webpack --config webpack.config.js",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2",
+    "test": "flow && jest",
+    "test:watch": "jest --watch"
+  }
 }
