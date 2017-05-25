@@ -6,18 +6,31 @@
   "repository": "https://github.com/KikahaPlus44/YarnBableCssnext",
   "author": "VallyPepyako",
   "license": "MIT",
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
+  },
+  "postcss": {
+    "map": true,
+    "plugins": {
+    }
+  },
   "devDependencies": {
+    "babel": "^5.8.23",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.5.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.2",
     "extract-text-webpack-plugin": "beta",
+    "file-loader": "^0.11.1",
     "postcss": "^6.0.1",
     "postcss-cssnext": "^2.11.0",
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.5",
-    "webpack": "^2.6.0",
+    "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   },
   "scripts": {
