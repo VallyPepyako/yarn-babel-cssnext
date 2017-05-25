@@ -16,7 +16,7 @@ In order to get started:
 ## Install dependency 
   
   ```sh
-  $ yarn i
+  $ yarn install
   ```
 ## What To Do Next
 
