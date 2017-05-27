@@ -17,6 +17,10 @@
     "plugins": {
     }
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-core": "^6.24.1",
@@ -24,7 +28,7 @@
     "babel-preset-env": "^1.5.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.2",
-    "extract-text-webpack-plugin": "beta",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "postcss": "^6.0.1",
     "postcss-cssnext": "^2.11.0",

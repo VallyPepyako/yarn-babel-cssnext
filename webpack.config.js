@@ -2,11 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 
 module.exports = {
-  context: path.resolve(__dirname, './src'),
-
+  context: path.resolve(__dirname, './app'),
   entry: {
     app: './scripts/app.js',
   },
@@ -17,28 +17,24 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, './dist'),
   },
-  plugins: [
-    new ExtractTextPlugin('css/app.css'),
-    new CopyWebpackPlugin([
-      {
-        from: 'index.html', to: 'index.html'
-      },
-    ],{
-      ignore: [
-          // // Doesn't copy any files with a txt extension
-          // '*.txt',
-          // // Doesn't copy any file, even if they start with a dot
-          // '**/*',
-          // // Doesn't copy any file, except if they start with a dot
-          // { glob: '**/*', dot: false }
-      ],
-      // By default, we only copy modified files during
-      // a watch or webpack-dev-server build. Setting this
-      // to `true` copies all files.
-      copyUnmodified: false
-    })
-  ],
   module: {
+    rules: [{
+      test: /\.css$/,
+      exclude: /node_modules/,
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: [
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          { loader: 'postcss-loader',
+            options: {
+              plugins: (loader) => [
+                require('autoprefixer')(),
+              ]
+            }
+          }
+        ]
+      })
+    }],
     loaders: [
       {
         test: /\.js$/,
@@ -50,12 +46,27 @@ module.exports = {
           presets: ['es2015', 'stage-0'],
         }
       },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          loader: 'css-loader?importLoaders=1!postcss-loader'
-        }),
-      },
     ],
   },
+  plugins: [
+    new ExtractTextPlugin("styles/app.css"),
+    new CopyWebpackPlugin([
+      {
+        from: 'index.html', to: 'index.html'
+      },
+    ],{
+      ignore: [
+        // // Doesn't copy any files with a txt extension
+        // '*.txt',
+        // // Doesn't copy any file, even if they start with a dot
+        // '**/*',
+        // // Doesn't copy any file, except if they start with a dot
+        // { glob: '**/*', dot: false }
+      ],
+      // By default, we only copy modified files during
+      // a watch or webpack-dev-server build. Setting this
+      // to `true` copies all files.
+      copyUnmodified: false
+    }),
+  ],
 };

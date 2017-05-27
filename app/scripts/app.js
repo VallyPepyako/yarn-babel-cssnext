@@ -1,4 +1,4 @@
-import styles from '../css/app.css';
+import styles from '../styles/app.css';
 import { sayHello } from './data';
 
 
