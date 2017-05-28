@@ -27,7 +27,9 @@ module.exports = {
             options: {
               plugins: (loader) => [
                 require('autoprefixer')(),
+                require('postcss-import-url'),
                 require('postcss-import')(),
+                require("postcss-custom-properties")(),
               ]
             }
           }
