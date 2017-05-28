@@ -2,8 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const autoprefixer = require('autoprefixer');
-
 
 module.exports = {
   context: path.resolve(__dirname, './app'),
@@ -29,6 +27,7 @@ module.exports = {
             options: {
               plugins: (loader) => [
                 require('autoprefixer')(),
+                require('postcss-import')(),
               ]
             }
           }
