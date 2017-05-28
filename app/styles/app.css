@@ -1,0 +1,6 @@
+/*Use reset or normalize*/
+@import "../../node_modules/reset-css/reset";
+/*@import "../../node_modules/normalize-css/normalize"*/
+
+/*Use setting or any css frame work*/
+@import "base/settings"
