@@ -22,7 +22,6 @@
 }
 
 body {
-  background: red;
   font-family: var(--font-main);
   & h1 {
     font-family: var(--font-second);
