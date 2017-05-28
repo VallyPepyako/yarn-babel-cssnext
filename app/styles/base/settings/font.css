@@ -1,6 +1,8 @@
 /* connecting google fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/*add local font*/
+
 /*initialize font */
 :root {
   --main-font: 'Roboto', sans-serif;
