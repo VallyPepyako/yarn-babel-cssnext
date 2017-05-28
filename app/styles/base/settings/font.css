@@ -1,14 +1,30 @@
 /* connecting google fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-/*add local font*/
+/*connecting local fonts mix-in*/
+@define-mixin font-face $file-path, $font-face {
+  @font-face {
+    font-family: $font-face;
+    src: url('../../fonts/' + $file-path + '/' + $file-path + '.woff2') format('woff2'),
+         url('../../fonts/' + $file-path + '/' + $file-path + '.woff') format('woff');
+  }
+}
+/*Connect local font from mix-in*/
+@mixin font-face lato, lato {
+  font-weight: normal;
+  font-style: normal;
+};
 
 /*initialize font */
 :root {
-  --main-font: 'Roboto', sans-serif;
+  --font-main: 'Roboto', sans-serif;
+  --font-second: 'lato', sans-serif;
 }
 
 body {
   background: red;
-  font-family: var(--main-font);
+  font-family: var(--font-main);
+  & h1 {
+    font-family: var(--font-second);
+  }
 }
