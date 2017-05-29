@@ -30,7 +30,7 @@ module.exports = {
                 require('postcss-import-url'),
                 require('postcss-import')(),
                 // polyfill for css custom properties
-                require("postcss-custom-properties")(),
+                require("postcss-custom-properties")({preserve: true}),
                 // sass like mix-in
                 require('postcss-mixins')(),
                 require('postcss-simple-vars')(),
