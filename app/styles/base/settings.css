@@ -3,3 +3,7 @@
 
 /*typography*/
 @import "settings/typography";
+
+/*flex box grid*/
+/*http://flexboxgrid.com*/
+@import "../../../node_modules/flexboxgrid/src/css/flexboxgrid"; 
