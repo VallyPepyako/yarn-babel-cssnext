@@ -9,6 +9,7 @@
          url('../../fonts/' + $file-path + '/' + $file-path + '.woff') format('woff');
   }
 }
+
 /*Connect local font from mix-in*/
 @mixin font-face lato, lato {
   font-weight: normal;

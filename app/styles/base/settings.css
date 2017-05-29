@@ -3,9 +3,3 @@
 
 /*typography*/
 @import "settings/typography";
-
-/*settings*/
-nav, .container {
-  max-width: 1120px;
-  margin: 0 auto;
-}

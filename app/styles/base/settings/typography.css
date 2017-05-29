@@ -6,41 +6,130 @@
   --h5: .875rem;
   --h6: .075rem;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  margin-bottom: calc(1rem * 1.3);
+
+body {
+  /* VEBKIT FONT SMOOTHINF */
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
-h1 {
+/* headers */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: .15rem;
+}
+
+h1, .h1 {
   font-size: var(--h1);
 }
-h2 {
+h2, .h2 {
   font-size: var(--h2);
 }
-h3 {
+h3, .h3 {
   font-size: var(--h3);
 }
-h4 {
+h4, .h4 {
   font-size: var(--h4);
 }
-h5 {
+h5, .h5 {
   font-size: var(--h5);
 }
-h6 {
+h6, .h6 {
   font-size: var(--h6);
 }
 
+/*inline stuff*/
 p {
   font-size: 1rem;
   line-height: 1.3;
-  margin-bottom: calc(1rem * 0.65);
+  margin: 1.35rem 0;
 }
+
 ul, ol {
-  margin-top: calc(1rem * 1.3);
-  margin-bottom: calc(1rem * 1.3);
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
   li {
     font-size: 1rem;
     line-height: 1.3;
-    margin-bottom: calc(1rem * 0.65);
+    margin-bottom: 0.65rem;
+  }
+}
+
+small, .small {}
+strong, .strong {}
+em, .em {}
+
+/* links and buttons */
+button, select {-webkit-appearance: none;}
+
+a {
+  // outline:none on :focus same like cursor: none for button, but what to do :)
+  &:hover, &:focus, &:active, &:active:focus {outline: none;}
+  text-decoration: none;
+  &:hover {}
+  &:active {}
+}
+
+.btn {
+  &:hover, &:active, &:focus, &:active:focus {}
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* images*/
+img {width: 100%; height: auto;}
+
+/* address */
+address, .address {
+  strong {}
+  a {}
+}
+
+/* for some reason use title="" inside <abbr>.
+   Add .initialism for make font smaller. */
+abbr, .abbr {}
+
+blockquote {
+  /* use <p> inside <blockquote>  */
+  p {}
+  footer {}
+  /* <cite title="Source Title">Source Title</cite> */
+  cite {}
+}
+
+/* ocation of terms and their definitions side by side in a line using .dl-horizontal () */
+dl {
+  dt {}
+  dd {}
+}
+
+/* Styling code and markings */
+pre {}
+code {}
+kbd {}
+mark {}
+
+
+/* table */
+
+.table {
+  thead {
+    tr {
+      th {}
+    }
+  }
+  tbody {
+    tr {
+      td {}
+    }
   }
 }
