@@ -1,3 +1,169 @@
 body {
-  background: #000;
+  /*background: #000;*/
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+  border-bottom: 1px solid rgba(14, 25, 41, 0.1);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  transition: all .3s;
+
+
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #fff;
+
+
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 1400px;
+  min-width: 1000px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+.logo {
+  border: 1px solid;
+
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  float: left;
+  height: 61px;
+  width: 235px;
+  background-image: url(/src/logo__header.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.phone {
+  line-height: 53px;
+}
+
+.phone b {
+  font-size: 110%;
+}
+
+.phone a {
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: .76px;
+  color: #0e192a;
+  text-decoration: none;
+}
+
+.schedule {
+  color: #0e192a;
+  font-size: 15px;
+  text-align: left;
+
+
+  margin-bottom: 8px;
+  line-height: 18px;
+  letter-spacing: .6px;
+}
+
+.schedule-title {
+  display: block;
+  margin-bottom: 8px;
+  line-height: 18px;
+  letter-spacing: .6px;
+}
+
+.schedule-holder {
+  display: flex;
+}
+
+.schedule-inner-holiday {
+  border-left: 1px solid #0e192a;
+  margin-left: 11px;
+  padding-left: 10px;
+}
+
+.schedule-day {
+  box-sizing: border-box;
+  border: 1px solid #0963aa;
+  float: left;
+  height: 7px;
+  margin-left: 10px;
+  width: 7px;
+  background: #0963aa;
+}
+
+.schedule-holiday {
+  background: none;
+  box-sizing: border-box;
+  border: 1px solid #0e192a;
+  float: left;
+  height: 7px;
+  margin-left: 10px;
+  width: 7px;
+}
+
+.schedule-day:first-of-type {
+  margin-left: 0;
+}
+
+.schedule-time {
+  margin-top: 3px;
+  color: #0e192a;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: .5px;
+}
+
+
+.block-3 {
+  width: 300px;
+  height: 280px;
+  background: url("/src/ea6901f95e08009c9dde4c13217cd61f.png");
+}
+
+
+.section-r {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+.section-title {
+  display: block;
+  margin: 20px 0 45px;
+  padding-bottom: 30px;
+  position: relative;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+  letter-spacing: 4.8px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #343e4d;
+}
+
+.section-title:before {
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 1px;
+  width: 90px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background: #343e4d;
+  content: '';
 }
