@@ -1,6 +1,11 @@
 /*Use reset or normalize*/
 @import "../../node_modules/reset-css/reset";
-/*@import "../../node_modules/normalize-css/normalize"*/
+/*@import "../../node_modules/normalize-css/normalize";*/
 
 /*Use setting or any css frame work*/
-@import "base/settings"
+@import "base/settings";
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+}
