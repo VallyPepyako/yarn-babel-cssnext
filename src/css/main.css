@@ -120,7 +120,6 @@ body {
   letter-spacing: .5px;
 }
 
-
 .call-button {
   width: 230px;
   position: relative;
@@ -151,6 +150,7 @@ body {
 
 .call-block {
   display: flex;
+  opacity: 0;
   position: absolute;
   top:0;
   left: 0;
