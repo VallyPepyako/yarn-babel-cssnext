@@ -6,8 +6,8 @@
 @import "base/settings";
 
 body {
-  background: url('../images/bg.jpg');
-  color: #fff;
+  /*background: url('../images/bg.jpg');
+  color: #fff;*/
 }
 
 .container {
