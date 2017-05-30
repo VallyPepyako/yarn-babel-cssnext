@@ -57,139 +57,141 @@
       <span class="schedule-title">График работы:</span>
       <div class="schedule-holder">
         <div class="schedule-inner">
-          <div class="schedule-graph">
-            <span class="schedule-day"></span>
-            <span class="schedule-day"></span>
-            <span class="schedule-day"></span>
-            <span class="schedule-day"></span>
-            <span class="schedule-day"></span>
-          </div>
+          <ul class="schedule-graph">
+            <li class="schedule-day"></li>
+            <li class="schedule-day"></li>
+            <li class="schedule-day"></li>
+            <li class="schedule-day"></li>
+            <li class="schedule-day"></li>
+          </ul>
           <span class="schedule-time">9:00 - 17:30</span>
         </div>
         <div class="schedule-inner-holiday">
-          <div class="schedule-graph">
-            <span class="schedule-holiday"></span>
-            <span class="schedule-holiday"></span>
-          </div>
+          <ul class="schedule-graph">
+            <li class="schedule-holiday"></li>
+            <li class="schedule-holiday"></li>
+          </ul>
           <span class="schedule-time">вых</span>
         </div>
       </div>
     </div>
 
+    <button class="call-button type_blue button">
+      Заказать звонок
+    </button>
+
     <div class="call-block">
-      <button class="call-button"></button>
+
+      <div class="call-form-message">
+        <div class="form-message-inner">
+          <span class="form-message-title">Спасибо за контакт!</span>
+          <p class="form-message-content">Ваше сообщение нами получено и в ближайшее время мы свяжемся с вами.</p>
+          <p class="form-message-action">Вернуться к <span class="form-message-close js-message-close">форме</span>.</p>
+        </div>
+      </div>
+
+      <div class="call-form">
+        <span class="form-name">Задайте дополнительные вопросы оформив заявку</span>
+        <span class="form-close">Свернуть</span>
+
+        <form class="form" id="top_part_form" onsubmit="yaCounter33249976.reachGoal('SENDFORM')"  method="post" name="" action="/ajax/contacts.php">
+          <!--<input type="hidden" name="form" value="Заказать звонок">-->
+          <!--<input type="hidden" name="page" value="/">-->
+          <div class="form-r">
+            <div class="form-3">
+              <div class="form-sel">
+                <input type="radio" checked="" name="status" value="Физическое лицо" id="status_physical">
+                <label for="status_physical">Физическое лицо</label>
+              </div>
+            </div>
+            <div class="form-3">
+              <div class="form-sel">
+                <input type="radio" name="status" value="Юридическое лицо" id="status_legal" class="js-form-corporate">
+                <label for="status_legal">Юридическое лицо</label>
+              </div>
+            </div>
+            <div class="form-3">
+              <input class="form-field form-disabled" type="text" name="company_name" placeholder="Название Вашей компании" style="opacity: 0; visibility: hidden;">
+            </div>
+          </div>
+          <div class="form-r">
+            <div class="form-3">
+              <input class="form-field" type="text" name="name" placeholder="Ваше Имя">
+            </div>
+            <div class="form-3">
+              <input class="form-field" type="text" name="phone" placeholder="+375 - -_ - -">
+            </div>
+            <div class="form-3">
+
+              <span class="select-time-title">Время звонка</span>
+
+              <div class="select-type-time">
+                <input class="select-input" type="hidden" name="from" value="">
+                <div class="select-button">
+                  <span class="select-default">С</span>
+                  <span class="select-value"></span>
+                </div>
+                <ul class="select-list">
+                  <li class="select-item" data-value="9:00">9:00</li>
+                  <li class="select-item" data-value="10:00">10:00</li>
+                  <li class="select-item" data-value="11:00">11:00</li>
+                  <li class="select-item" data-value="12:00">12:00</li>
+                  <li class="select-item" data-value="13:00">13:00</li>
+                  <li class="select-item" data-value="14:00">14:00</li>
+                  <li class="select-item" data-value="15:00">15:00</li>
+                  <li class="select-item" data-value="16:00">16:00</li>
+                  <li class="select-item" data-value="17:00">17:00</li>
+                  <li class="select-item" data-value="18:00">18:00</li>
+                  <li class="select-item" data-value="19:00">19:00</li>
+                  <li class="select-item" data-value="20:00">20:00</li>
+                  <li class="select-item" data-value="21:00">21:00</li>
+                </ul>
+              </div>
+
+              <span class="select-time-separator"></span>
+
+              <div class="select-type-time">
+                <input class="select-input" type="hidden" name="to" value="">
+                <div class="select-button">
+                  <span class="select-default">По</span>
+                  <span class="select-value"></span>
+                </div>
+                <ul class="select-list">
+                  <li class="select-item" data-value="9:00">9:00</li>
+                  <li class="select-item" data-value="10:00">10:00</li>
+                  <li class="select-item" data-value="11:00">11:00</li>
+                  <li class="select-item" data-value="12:00">12:00</li>
+                  <li class="select-item" data-value="13:00">13:00</li>
+                  <li class="select-item" data-value="14:00">14:00</li>
+                  <li class="select-item" data-value="15:00">15:00</li>
+                  <li class="select-item" data-value="16:00">16:00</li>
+                  <li class="select-item" data-value="17:00">17:00</li>
+                  <li class="select-item" data-value="18:00">18:00</li>
+                  <li class="select-item" data-value="19:00">19:00</li>
+                  <li class="select-item" data-value="20:00">20:00</li>
+                  <li class="select-item" data-value="21:00">21:00</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <div class="form-r">
+            <div class="form-full">
+              <textarea class="form-textarea" name="message" placeholder="Ваше сообщение"></textarea>
+            </div>
+          </div>
+          <div class="form-r">
+            <button class="button b-blue form-button" type="submit">Отправить</button>
+          </div>
+        </form>
+
+      </div>
+
     </div>
 
   </header>
 
-  <div class="call-block">
 
-    <div class="call-form-message">
-      <div class="form-message-inner">
-        <span class="form-message-title">Спасибо за контакт!</span>
-        <p class="form-message-content">Ваше сообщение нами получено и в ближайшее время мы свяжемся с вами.</p>
-        <p class="form-message-action">Вернуться к <span class="form-message-close js-message-close">форме</span>.</p>
-      </div>
-    </div>
-
-    <div class="call-form">
-      <span class="form-name">Задайте дополнительные вопросы оформив заявку</span>
-      <span class="form-close">Свернуть</span>
-     
-      <form class="form" id="top_part_form" onsubmit="yaCounter33249976.reachGoal('SENDFORM')"  method="post" name="" action="/ajax/contacts.php">
-        <!--<input type="hidden" name="form" value="Заказать звонок">-->
-        <!--<input type="hidden" name="page" value="/">-->
-        <div class="form-r">
-          <div class="form-3">
-            <div class="form-sel">
-              <input type="radio" checked="" name="status" value="Физическое лицо" id="status_physical">
-              <label for="status_physical">Физическое лицо</label>
-            </div>
-          </div>
-          <div class="form-3">
-            <div class="form-sel">
-              <input type="radio" name="status" value="Юридическое лицо" id="status_legal" class="js-form-corporate">
-              <label for="status_legal">Юридическое лицо</label>
-            </div>
-          </div>
-          <div class="form-3">
-            <input class="form-field form-disabled" type="text" name="company_name" placeholder="Название Вашей компании" style="opacity: 0; visibility: hidden;">
-          </div>
-        </div>
-        <div class="form-r">
-          <div class="form-3">
-            <input class="form-field" type="text" name="name" placeholder="Ваше Имя">
-          </div>
-          <div class="form-3">
-            <input class="form-field" type="text" name="phone" placeholder="+375 - -_ - -">
-          </div>
-          <div class="form-3">
-
-            <span class="select-time-title">Время звонка</span>
-
-            <div class="select-type-time">
-              <input class="select-input" type="hidden" name="from" value="">
-              <div class="select-button">
-                <span class="select-default">С</span>
-                <span class="select-value"></span>
-              </div>
-              <div class="select-list">
-                <span class="select-item" data-value="9:00">9:00</span>
-                <span class="select-item" data-value="10:00">10:00</span>
-                <span class="select-item" data-value="11:00">11:00</span>
-                <span class="select-item" data-value="12:00">12:00</span>
-                <span class="select-item" data-value="13:00">13:00</span>
-                <span class="select-item" data-value="14:00">14:00</span>
-                <span class="select-item" data-value="15:00">15:00</span>
-                <span class="select-item" data-value="16:00">16:00</span>
-                <span class="select-item" data-value="17:00">17:00</span>
-                <span class="select-item" data-value="18:00">18:00</span>
-                <span class="select-item" data-value="19:00">19:00</span>
-                <span class="select-item" data-value="20:00">20:00</span>
-                <span class="select-item" data-value="21:00">21:00</span>
-              </div>
-            </div>
-
-            <span class="select-time-separator"></span>
-
-            <div class="select-type-time">
-              <input class="select-input" type="hidden" name="to" value="">
-              <div class="select-button">
-                <span class="select-default">По</span>
-                <span class="select-value"></span>
-              </div>
-              <div class="select-list">
-                <span class="select-item" data-value="9:00">9:00</span>
-                <span class="select-item" data-value="10:00">10:00</span>
-                <span class="select-item" data-value="11:00">11:00</span>
-                <span class="select-item" data-value="12:00">12:00</span>
-                <span class="select-item" data-value="13:00">13:00</span>
-                <span class="select-item" data-value="14:00">14:00</span>
-                <span class="select-item" data-value="15:00">15:00</span>
-                <span class="select-item" data-value="16:00">16:00</span>
-                <span class="select-item" data-value="17:00">17:00</span>
-                <span class="select-item" data-value="18:00">18:00</span>
-                <span class="select-item" data-value="19:00">19:00</span>
-                <span class="select-item" data-value="20:00">20:00</span>
-                <span class="select-item" data-value="21:00">21:00</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="form-r">
-          <div class="form-full">
-            <textarea class="form-textarea" name="message" placeholder="Ваше сообщение"></textarea>
-          </div>
-        </div>
-        <div class="form-r">
-          <button class="button b-blue form-button" type="submit">Отправить</button>
-        </div>
-      </form>
-
-    </div>
-
-  </div>
 
   <main class="main">
 
@@ -197,7 +199,7 @@
       <h2 class="section-title">Акции</h2>
 
       <div class="section-r">
-        <div class="block-3"  ">
+        <div class="block-3">
 
           <h3 class="sales-preview">Обновленный УАЗ Партиот доступен в лизинг от 7,4%</h3>
 
