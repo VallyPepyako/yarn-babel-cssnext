@@ -22,12 +22,12 @@ module.exports = {
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [
-          { loader: 'css-loader', options: { importLoaders: 1 } },
+          { loader: 'css-loader', options: { importLoaders: 1, url: false } },
           { loader: 'postcss-loader',
             options: {
               plugins: (loader) => [
                 require('autoprefixer')(),
-                require('postcss-import-url'),
+                // require('postcss-import-url'),
                 require('postcss-import')(),
                 require("postcss-custom-properties")({preserve: true}),
                 // sass like mix-in
@@ -59,6 +59,9 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: 'index.html', to: 'index.html'
+      },
+      {
+        from: 'images', to: 'images'
       },
     ],{
       ignore: [
